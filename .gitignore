@@ -4,5 +4,8 @@
 # VS code special directory
 /.vscode
 
+# All json files
+*.json
+
 # File with secret data
 config.py
