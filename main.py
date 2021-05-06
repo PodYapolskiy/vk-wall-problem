@@ -6,7 +6,7 @@ import vk_api
 from config import login, password
 
 
-def delete_posts(offset: int):
+def delete_posts(offset=0):
 	"""
 	:param offset: Отступ от последней записи на стене. Удаление будет происходить, начиная с `offset` + 1 записи.
 	:type offset: int
