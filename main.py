@@ -3,17 +3,16 @@ VK_Wall_Problem
 
 """
 import vk_api
+from config import login, password
 
 
 def main():
-
-    #Authentification
-    vk_session = vk_api.VkApi('***', '***')#login, password
+    # Authentification
+    vk_session = vk_api.VkApi(login, password)
     vk_session.auth()
     vk = vk_session.get_api()
 
-
-    #delete posts, exept first 10
+    # Delete posts, exept first 10
     posts = vk.wall.get(count=100, offset=10)['items']
     while posts:
         for post in posts:
