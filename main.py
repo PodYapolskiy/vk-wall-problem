@@ -1,7 +1,4 @@
-"""
-VK_Wall_Problem
-
-"""
+"""VK_Wall_Problem"""
 import vk_api
 from config import login, password
 
@@ -27,7 +24,7 @@ if __name__ == '__main__':
 		vk_session.auth()
 		vk = vk_session.get_api()
 
-		delete_posts(offset=15)
+		delete_posts()
 	
 	except Exception as e:
-		print("Ошибка аунтефикации: ", e)
+		print("Ошибка аутентификации: ", e)
